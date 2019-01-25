@@ -1,6 +1,6 @@
 FROM haskell:8
 
-LABEL  maintainer="Stephen Steiner <ntwrkguru@gmail.com>"
+LABEL  maintainer="Scott Koga-Browes <kogabrowes@gmail.com>"
 
 # Install dependencies
 RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selections \
@@ -14,6 +14,7 @@ RUN echo 'debconf debconf/frontend select Noninteractive' | debconf-set-selectio
        texlive-bibtex-extra \
        fontconfig \
        lmodern \
+       fonts-noto-cjk \
        libghc-text-icu-dev \
        zip \
     && apt-get clean
